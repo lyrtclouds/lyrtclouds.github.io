@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+</head>
+
+<body>
+    <div id="chart">
+        <div>Title of the graph</div>
+        <svg width="300" height="200"></svg>
+    </div>
+
+    <script>
+        var svg = d3.select('#chart svg')
+
+        var data = [{
+            country: 'A',
+            GDP: 120,
+            Population: 50,
+            Life: 50
+        }, {
+            country: 'B',
+            GDP: 50,
+            Population: 100,
+            Life: 50
+
+        }, {
+            country: 'C',
+            GDP: 200,
+            Population: 100,
+            Life: 80
+
+        }];
+
+        var data2 = [{
+            country: 'A',
+            GDP: 30,
+            Population: 50,
+            Life: 30
+        }, {
+            country: 'B',
+            GDP: 40,
+            Population: 100,
+            Life: 20
+
+        }, {
+            country: 'D',
+            GDP: 10,
+            Population: 100,
+            Life: 50
+
+        }];
+
+        function updateChart(data) {
+            var circles = svg
+                .selectAll('circle')
+                .data(data, function(d, i) {
+                    return d['country']
+                })
+            circles
+                .enter()
+                .append('circle')
+                .merge(circles)
+                .transition()
+                .attr('r', 10)
+                .attr('cx', function(d, i) {
+                    return d['GDP']
+                })
+                .attr('cy', function(d, i) {
+                    return d['Life']
+                })
+
+            circles
+                .exit()
+                .transtion()
+                .style('fill', 'rgba(0,0,0,0)')
+                .on('end', function() {
+                    d3.select(this).remove()
+                })
+        }
+
+        updateChart(data)
+        setTimeout(function() {
+            updateChart(data2)
+        }, 5000)
+    </script>
+</body>
+
+</html>
+
+
+
+<!--svg width="300" height="200"> 
+         <circle r=10 cx=290  cy=70> </circle>   
+         <circle r=10 cx=100  cy=130> </circle>  
+         <circle r=10 cx=200  cy=100> </circle>  
+         <g transform=" translate(25) rotate(-2)"> 
+         <rect width=150 height=20 x=80 y=50> </rect>
+         <text y=120 x=20> text</text>
+         </g>
+        </svg>

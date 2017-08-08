@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <style>
+        error {}
+        
+        correct {
+            display: none;
+        }
+        
+        error.answer {
+            background-color: red;
+        }
+        
+        correct.answer {
+            background-color: green;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>This is
+                    <error>an</error>
+                    <correct>a</correct> paragraph.</p>
+                <p> It contains
+                    <error>som</error>
+                    <correct>some</correct>
+                    <erroe>gramma</error>
+                        <correct>gramma</correct> errors.</p>
+
+                <button class="btn" id="show">show</button>
+                <button class="btn" id="hide">hide </button>
+                <button class="btn" id="toggle">toggle</button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            var showAnswer = function() {
+                $('error').addClass('answer');
+                $('correct').addClass('answer');
+            }
+
+            var hideAnswer = function() {
+                $('error').removeClass('answer');
+                $('correct').removeClass('answer');
+            }
+            var isAnswerShown = false;
+            var toggleAnswer = function() {
+                if (isAnswerShown) {
+                    hideAnswer();
+                    isAnswerShown = false;
+                } else {
+                    showAnswer();
+                    isAnswerShown = true;
+                }
+            }
+            $('#show').click(showAnswer);
+            $('#hide').click(hideAnswer);
+            $('#toggle').click(toggleAnswer);
+        })
+    </script>
+
+</body>
+
+</html>

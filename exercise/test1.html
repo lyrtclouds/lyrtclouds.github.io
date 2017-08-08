@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title> Echarts</title>
+    <script src="js/echarts.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <p>one chart </p>
+    <div id="main1" style="width:400px;height:400px"> </div>
+
+    <script type="text/javascript">
+        $.getJSON('option.json', function(res) {
+            console.log(res);
+
+            var myChart1 = echarts.init(document.getElementById('main1'));
+            myChart1.setOption(res);
+        });
+        //option['series'][0]['stack'] = 'population';
+        // option['series'][1]['stack'] = 'population';
+        //var myChart2 = echarts.init(document.getElementById('main2'));
+        // myChart2.setOption(option);
+    </script>
+</body>
+
+</html>

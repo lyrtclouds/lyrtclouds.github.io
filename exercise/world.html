@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <title> Echarts</title>
+    <script src="js/echarts.js"></script>
+    <style>
+        #main1 {
+            margin-left: 3em;
+        }
+        
+        #main2 {
+            margin-left: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <p>one chart </p>
+    <div id="main1" style="width:400px;height:400px"> </div>
+    <div id="main2" style="width:600px;height:400px;"></div>
+    <script type="text/javascript">
+        <html>
+
+<head>
+    <title> Echarts</title>
+    <script src="js/echarts.js"></script>
+    <style>
+        #main1 {
+            margin-left: 3em;
+        }
+        
+        #main2 {
+            margin-left: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <p>one chart </p>
+    <div id="main1" style="width:400px;height:400px"> </div>
+    
+    <script type="text/javascript">
+        var option = {
+            "title": {
+                "text": "Hong Kong Population by gender"
+            },
+            "legend": {
+                "data": ["Male", "Female"],
+                "align": "left",
+                "top": 20,
+                "left": 10
+            },
+            "xAxis": [{
+                "type": "category",
+                "data": [
+                    1991,
+                    1996,
+                    2001
+                ],
+                "axisTick": {
+                    "alignWithLabel": true
+                }
+            }],
+            "yAxis": [{
+                "type": "value"
+            }],
+            "series": [{
+                "name": "Male",
+                "type": "bar",
+                "data": [
+                    2811991,
+                    3108107,
+                    3285344
+                ],
+            }, {
+                "name": "Female",
+                "type": "bar",
+                "data": [
+                    2710290,
+                    3109449,
+                    3423045
+                ],
+                "barwidth": "10px",
+            }]
+        };
+
+
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        myChart1.setOption(option);
+
+        option['series'][0]['stack'] = 'population';
+        option['series'][1]['stack'] = 'population';
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        myChart2.setOption(option);
+    </script>
+</body>
+
+</html>
+
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        myChart1.setOption(option);
+
+        option['series'][0]['stack'] = 'population';
+        option['series'][1]['stack'] = 'population';
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        myChart2.setOption(option);
+    </script>
+</body>
+
+</html>

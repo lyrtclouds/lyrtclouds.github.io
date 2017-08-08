@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title> LY </title>
+    <style>
+        div {
+            position: relative;
+            width: 250px;
+            height: 150px;
+            background-color: lavender;
+            margin: 10px;
+        }
+        
+        span {
+            position: absolute;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: plum;
+            border-radius: 50%;
+        }
+        
+        #fixed {
+            width: 50%;
+            height: 2em;
+            background-color: blanchedalmond;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20
+        }
+        
+        #top {
+            width: 2em;
+            height: 2em;
+            background-color: blanchedalmond;
+            position: fixed;
+            bottom: 1em;
+            right: 1em;
+            margin: 0 z-index: 20
+        }
+    </style>
+</head>
+
+<body>
+    My page
+    <div id="fixed">header</div>
+    <div id="top">
+        <a href="#">top</a>
+    </div>
+    <div>
+        div1
+        <span style="left: 50px;
+            top: 10px;">span1</span>
+        <span style="left: 90px;
+            top: 30px;">span2</span>
+        <span style="left: 10px;
+            top: 60px;">span1</span>
+        <span style="left: 100px;
+            top: 40px;">span2</span>
+        <span style="left: 50px;
+            top: 70px;">span1</span>
+        <span style="left: 20px;
+            top: 10px;">span2</span>
+    </div>
+    <div style="z-index:20">div2</div>
+    <div>div3</div>
+    <div style="z-index:20">div4</div>
+    <div>div5</div>
+    <div style="z-index:20">div6</div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title> Echarts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/echarts.js"></script>
+    <script src="js/echarts-liquidfill.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+
+<body>
+    <div id="chart" style="width:550px;height:550px">
+        <ul>
+            <script type="text/javascript">
+                $.getJSON('sq.json', function(res) {
+                    console.log(res);
+
+                    var chart = echarts.init(document.getElementById('chart'));
+                    chart.setOption(res);
+                });
+            </script>
+        </ul>
+    </div>
+</body>
+
+</html>
