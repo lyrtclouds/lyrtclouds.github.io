@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/echarts.js"></script>
+
+
+    <style>
+        .col-md-8 column {
+            margin-left: 3em;
+            margin-top: 5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="jumbotron">
+                    <h1>
+                        被美国家庭领养的中国孩子
+                    </h1>
+                    <p>
+                        据统计
+                    </p>
+
+                </div>
+                <grammarly>
+                    <div class="_e725ae-textarea_btn _e725ae-show _e725ae-field_hovered">
+                        <div class="_e725ae-transform_wrap">
+                            <div class="_e725ae-status">
+                            </div>
+                        </div>
+                    </div>
+                </grammarly>
+                <div class="page-header">
+                    <h1>
+                        Example page header <small>Subtext for header</small>
+                    </h1>
+                    <grammarly>
+                        <div class="_e725ae-textarea_btn _e725ae-show _e725ae-field_hovered">
+                            <div class="_e725ae-transform_wrap">
+                                <div class="_e725ae-status">
+                                </div>
+                            </div>
+                        </div>
+                    </grammarly>
+                </div>
+                <h2>
+                    Heading
+                </h2>
+                <p>
+                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                </p>
+                <p>
+                    <a class="btn" href="#">View details »</a>
+                </p>
+                <div class="row clearfix">
+                    <div class="col-md-8 column" id="number" style="width:800px;height:800px">
+                        <script type="text/javascript">
+                            var
+                                option = {
+                                    title: {
+                                        text: '美国收养孩子数量',
+
+                                    },
+                                    tooltip: {
+                                        trigger: 'axis'
+                                    },
+                                    legend: {
+                                        data: ['数量']
+                                    },
+                                    toolbox: {
+                                        show: true,
+                                        feature: {
+                                            dataView: {
+                                                show: true,
+                                                readOnly: false
+                                            },
+                                            magicType: {
+                                                show: true,
+                                                type: ['line', 'bar']
+                                            },
+                                            restore: {
+                                                show: true
+                                            },
+                                            saveAsImage: {
+                                                show: true
+                                            }
+                                        }
+                                    },
+                                    calculable: true,
+                                    xAxis: [{
+                                        name: '年份',
+                                        type: 'category',
+                                        data: ['1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016']
+                                    }],
+                                    yAxis: [{
+                                        type: 'value'
+                                    }],
+                                    series: [{
+                                        name: '数量',
+                                        type: 'bar',
+                                        data: [61, 206, 330, 787, 2130, 3333, 3597, 4206, 4101, 5053, 4681, 6119, 6859, 7044, 7906, 6493, 5453, 3909, 3000, 3401, 2587, 2696, 2306, 2040, 2354, 2231],
+                                        markPoint: {
+                                            data: [{
+                                                type: 'max',
+                                                name: '最大值'
+                                            }, {
+                                                type: 'min',
+                                                name: '最小值'
+                                            }]
+                                        },
+                                        markLine: {
+                                            data: [{
+                                                type: 'average',
+                                                name: '平均值'
+                                            }]
+                                        }
+                                    }]
+                                };
+
+
+                            var myChart = echarts.init(document.getElementById('number'));
+                            myChart.setOption(option)
+                        </script>
+
+
+
+                    </div>
+                    <div class="col-md-4 column">
+                    </div>
+                </div>
+                <div class="page-header">
+                    <h1>
+                        Example page header <small>Subtext for header</small>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
